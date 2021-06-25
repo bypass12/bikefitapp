@@ -9,7 +9,7 @@ let video;
 let label = "waiting...";
 // The classifier
 let classifier;
-let modelURL = 'https://storage.googleapis.com/tm-models/YadBJmj5/';
+let modelURL = 'https://teachablemachine.withgoogle.com/models/8NWaDCi8O/';
 
 // STEP 1: Load the model!
 function preload() {
@@ -44,13 +44,12 @@ function draw() {
   text(label, width / 2, height - 16);
 
   // Pick an emoji, the "default" is train
-  let emoji = "🚂";
-  if (label == "Rainbow") {
-    emoji = "🌈";
-  } else if (label == "Unicorn") {
-    emoji = "🦄";
-  } else if (label == "Ukulele") {
-    emoji = "🎸";
+  let emoji = "🧍";
+  if (label == "attack") {
+    emoji = "🚲";
+  } else if (label == "recovery") {
+    emoji = "🚴‍♂️";
+;
   }
 
   // Draw the emoji
